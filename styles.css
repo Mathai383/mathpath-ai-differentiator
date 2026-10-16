@@ -1,0 +1,183 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7faf6;
+  color: #19372e;
+}
+
+header, main, footer {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfe9e0;
+}
+
+header h2 span, .hero h1 span {
+  color: #23765a;
+}
+
+header p, .tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #56806c;
+  font-weight: bold;
+}
+
+.hero {
+  padding: 48px 0 30px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 60px);
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero p:not(.tag) {
+  color: #6b7c73;
+  line-height: 1.7;
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 22px 0;
+}
+
+.level {
+  text-align: left;
+  border: 1px solid #dce7dd;
+  border-radius: 14px;
+  padding: 20px;
+  background: white;
+  color: #19372e;
+  cursor: pointer;
+}
+
+.level:hover {
+  transform: translateY(-2px);
+}
+
+.level.active {
+  border: 2px solid #23765a;
+  background: #edf6ef;
+}
+
+.level p {
+  color: #718078;
+  line-height: 1.6;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+}
+
+.problem, .coach {
+  padding: 24px;
+  border: 1px solid #dfe8df;
+  border-radius: 15px;
+  background: white;
+}
+
+.equation {
+  background: #eff6ef;
+  padding: 25px 10px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #d6e2d7;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  font: inherit;
+}
+
+#check {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #23765a;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#check:hover {
+  background: #165b43;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.actions button {
+  background: #edf5ef;
+  color: #23765a;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#feedback {
+  min-height: 20px;
+  font-weight: bold;
+}
+
+.coach {
+  line-height: 1.8;
+}
+
+.coach small {
+  color: #7b8980;
+}
+
+footer {
+  margin-top: 30px;
+  color: #7b8980;
+  border-top: 1px solid #dfe9e0;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .levels, .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+}

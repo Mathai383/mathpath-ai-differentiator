@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathPath AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h2>∑ MathPath <span>AI</span></h2>
+    <p>PERSONALIZED MATH PRACTICE</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="tag">LEARN AT YOUR LEVEL</p>
+      <h1>One concept.<br><span>Three ways</span> to grow.</h1>
+      <p>Learn quadratic equations with tasks adapted to your level.</p>
+    </section>
+
+    <h2>Choose your learning path</h2>
+
+    <section class="levels">
+      <button data-level="foundation" class="level active">
+        <b>Level 1</b>
+        <h3>Foundation</h3>
+        <p>Simple problems and step-by-step help.</p>
+      </button>
+
+      <button data-level="standard" class="level">
+        <b>Level 2</b>
+        <h3>Standard</h3>
+        <p>School-level problems and independent practice.</p>
+      </button>
+
+      <button data-level="advanced" class="level">
+        <b>Level 3</b>
+        <h3>Advanced</h3>
+        <p>Complex problems and real-world applications.</p>
+      </button>
+    </section>
+
+    <section class="workspace">
+      <article class="problem">
+        <p class="tag">YOUR CHALLENGE</p>
+        <h2 id="problemTitle">Let's solve it together</h2>
+        <p id="context">Find two numbers that multiply to 6
+          and add to 5.</p>
+
+        <div class="equation" id="equation">
+          x² − 5x + 6 = 0
+        </div>
+
+        <label for="answer">Your answer (two roots)</label>
+        <input id="answer" placeholder="Example: 2, 3">
+        <button id="check">Check answer →</button>
+        <p id="feedback" aria-live="polite"></p>
+
+        <div class="actions">
+          <button id="hint">✦ Give me a hint</button>
+          <button id="solution">Show solution</button>
+          <button id="newProblem">New problem ↻</button>
+        </div>
+      </article>
+
+      <aside class="coach">
+        <h3>✦ AI Learning Coach</h3>
+        <p id="coachMessage">
+          Welcome! Choose your level and try solving the problem.
+          I can give you hints and explain the solution.
+        </p>
+        <ol id="steps"></ol>
+        <small>
+          AI explanations may contain mistakes.
+          Always check the mathematical steps.
+        </small>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    MathPath AI · Algebra · Differentiated Learning
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
